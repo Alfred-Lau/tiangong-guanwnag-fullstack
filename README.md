@@ -1,47 +1,33 @@
-# tiangong-guanwnag-fullstack
+# hackernews-async-ts
 
-基于 umi 和 egg 实现的 官网全栈框架
+[Hacker News](https://news.ycombinator.com/) showcase using typescript && egg
 
-## Development
+## QuickStart
 
-Egg has integrated with assets tools by [egg-view-assets], so you don't have to start another command for serving assets.
+### Development
 
 ```bash
+$ npm i
 $ npm run dev
+$ open http://localhost:7001/
 ```
 
-`npm run dev` will start a dev server for assets that configured in `config.assets.devServer`.
+Don't tsc compile at development mode, if you had run `tsc` then you need to `npm run clean` before `npm run dev`.
 
-## Deployment
-
-Assets should be compiled before shipping.
+### Deploy
 
 ```bash
-$ npm run build
-```
-
-It will be generated to `app/public` that hosted by Egg, due to the configration of ``.webpackrc`.
-
-Start Egg with prod environment.
-
-```bash
+$ npm run tsc
 $ npm start
 ```
 
-### Deploy assets to CDN
+### Npm Scripts
 
-TODO
+- Use `npm run lint` to check code style
+- Use `npm test` to run unit test
+- se `npm run clean` to clean compiled js at development mode once
 
-## How to Contribute
+### Requirement
 
-Please let us know how can we help. Do check out [issues](https://github.com/eggjs/egg/issues) for bug reports or suggestions first.
-
-To become a contributor, please follow our [contributing guide](CONTRIBUTING.md).
-
-## License
-
-[MIT](LICENSE)
-
-[egg.js]: https://eggjs.org
-[ant design pro]: https://github.com/ant-design/ant-design-pro
-[egg-view-assets]: https://github.com/eggjs/egg-view-assets
+- Node.js 8.x
+- Typescript 2.8+
