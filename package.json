@@ -22,12 +22,14 @@
     "clean": "ets clean"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.6.2",
     "egg": "^2.6.1",
     "egg-scripts": "^2.6.0",
     "egg-view-assets": "^1.8.0",
     "egg-view-nunjucks": "^2.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
     "umi": "^3.5.20"
   },
   "devDependencies": {

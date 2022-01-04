@@ -1,6 +1,6 @@
-# hackernews-async-ts
+# tiangong-guanwang-fullstack
 
-[Hacker News](https://news.ycombinator.com/) showcase using typescript && egg
+> 框架目标；紧跟  react 技术栈最新版本 和 ts 最新版本
 
 ## QuickStart
 

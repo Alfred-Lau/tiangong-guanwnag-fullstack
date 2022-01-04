@@ -1,5 +1,5 @@
 import { EggAppConfig, EggAppInfo, PowerPartial } from "egg";
-// import * as path from "path";
+import * as path from "path";
 
 export default (appInfo: EggAppInfo) => {
   const config = {} as PowerPartial<EggAppConfig>;
@@ -14,6 +14,14 @@ export default (appInfo: EggAppInfo) => {
     mapping: {
       ".html": "nunjucks",
     },
+  };
+
+  // seo 部分的支持
+  config.seo = {
+    site: "https://lazy-minus-your-intelligence.com/",
+    basePath: path.join(appInfo.baseDir, "app", "view"),
+    // 需要 进行seo的页面 url 和 对应模板名称
+    pages: [{ path: "/", name: "home.html" }],
   };
 
   config.assets = {
