@@ -24,12 +24,18 @@ export default (appInfo: EggAppInfo) => {
     pages: [{ path: "/", name: "home.html" }],
   };
 
+  config.storage = {
+    oss: {
+      //大文件上传
+    },
+  };
+
   config.assets = {
     publicPath: "/public",
     devServer: {
       autoPort: true,
       command: "umi dev --port={port}",
-      port: 7001,
+      port: 8000,
       env: {
         APP_ROOT: process.cwd() + "/app/web",
         BROWSER: "none",
