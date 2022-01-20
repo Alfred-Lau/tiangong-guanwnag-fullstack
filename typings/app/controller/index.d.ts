@@ -3,9 +3,13 @@
 
 import 'egg';
 import ExportHome from '../../../app/controller/home';
+import ExportToolsUpload from '../../../app/controller/tools/upload';
 
 declare module 'egg' {
   interface IController {
     home: ExportHome;
+    tools: {
+      upload: ExportToolsUpload;
+    }
   }
 }
