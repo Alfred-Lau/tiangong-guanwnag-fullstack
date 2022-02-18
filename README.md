@@ -51,5 +51,5 @@ $ npm start
 
 ### 系统要求
 
-- Node.js 8.x
+- Node.js 8.x, Node.js 17.x 目前有 bug
 - Typescript 2.8+
