@@ -9,7 +9,8 @@ export default (appInfo: EggAppInfo) => {
   config.keys = appInfo.name + "_1638289748617_6665";
 
   // add your egg config in here
-  config.middleware = [];
+  config.middleware = ["seo"];
+
   config.view = {
     mapping: {
       ".html": "nunjucks",

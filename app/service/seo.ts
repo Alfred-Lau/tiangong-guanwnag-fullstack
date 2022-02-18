@@ -9,7 +9,7 @@ export default class SeoService extends Service {
     return this.ctx.isAPI();
   }
 
-  public async render() {
-    console.log(this.isSpider, this.config.seo);
+  public async renderStaticPage() {
+    // console.log(this.isSpider);
   }
 }

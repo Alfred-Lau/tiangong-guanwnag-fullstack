@@ -9,7 +9,7 @@ export default {
     const res = await ctx.curl("https://jsonplaceholder.typicode.com/todos/1", {
       dataType: "json",
     });
-    ctx.service.seo.render();
+    await ctx.service.seo.renderStaticPage();
     ctx.app.cache = res.data;
   },
 };
