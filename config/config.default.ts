@@ -19,10 +19,10 @@ export default (appInfo: EggAppInfo) => {
 
   // seo 部分的支持
   config.seo = {
-    site: "https://lazy-minus-your-intelligence.com/",
+    site: "https://lazy-minus-your-intelligence.com",
     basePath: path.join(appInfo.baseDir, "app", "view"),
     // 需要 进行seo的页面 url 和 对应模板名称
-    pages: [{ path: "/", name: "home.html" }],
+    pages: [{ path: "/home", name: "home.html" }],
   };
 
   config.storage = {

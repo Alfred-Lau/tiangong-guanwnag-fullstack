@@ -5,7 +5,7 @@ export default [
     routes: [
       {
         path: "/",
-        component: "index",
+        component: "home",
       },
       {
         path: "/about",

@@ -17,4 +17,7 @@ export default {
   runtimePublicPath: true,
   // hash: true,
   outputPath: "../public",
+  title: "天工官网全栈框架",
+  favicon:
+    "https://lazy-minus-your-intelligence.oss-cn-qingdao.aliyuncs.com/favicon.ico",
 };

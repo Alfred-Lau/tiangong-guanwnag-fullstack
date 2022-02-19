@@ -23,18 +23,22 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
+    "axios": "^0.26.0",
     "egg": "^2.6.1",
     "egg-scripts": "^2.6.0",
     "egg-view-assets": "^1.8.0",
     "egg-view-nunjucks": "^2.3.0",
+    "puppeteer": "^13.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
     "umi": "^3.5.20"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/mocha": "^2.2.40",
     "@types/node": "^16.11.11",
+    "@types/puppeteer": "^5.4.4",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "@types/supertest": "^2.0.0",
