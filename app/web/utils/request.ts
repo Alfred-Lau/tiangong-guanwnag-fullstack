@@ -24,7 +24,7 @@ function handleErrorResponse(err: Error) {
   return err;
 }
 
-function request(url: string, options?: RequestOptions): Promise<any> {
+function request<T>(url: string, options?: RequestOptions): Promise<T> {
   const axios = Axios.create({
     timeout: 3000,
   });
