@@ -5,3 +5,11 @@ declare module "egg" {
     cache: any;
   }
 }
+
+declare global {
+  namespace NodeJS {
+    interface Process {
+      client: boolean;
+    }
+  }
+}

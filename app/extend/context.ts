@@ -1,4 +1,5 @@
 import { Context } from "egg";
+console.log(process.client);
 
 const API_REG = /^\/api\//;
 const BAIDU_SPIDER = /^BAIDU_SPIDER/;

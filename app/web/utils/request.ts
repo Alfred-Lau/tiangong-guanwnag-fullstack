@@ -1,6 +1,9 @@
 import Axios, { AxiosResponse } from "axios";
+import { getCookie } from "./cookie";
 
-type RequestOptions = {};
+type RequestOptions = {
+  headers: Record<string, any>;
+};
 
 function handleSuccessResponse(data: AxiosResponse) {
   let result;
@@ -25,8 +28,18 @@ function handleErrorResponse(err: Error) {
 }
 
 function request<T>(url: string, options?: RequestOptions): Promise<T> {
+  const { headers } = options || {};
+  const csrf_authorization = getCookie("csrfToken");
+
+  if (csrf_authorization) {
+    Object.assign(headers, {
+      "x-csrf-token": csrf_authorization,
+    });
+  }
+
   const axios = Axios.create({
     timeout: 3000,
+    headers,
   });
 
   axios.interceptors.response.use(handleSuccessResponse, handleErrorResponse);

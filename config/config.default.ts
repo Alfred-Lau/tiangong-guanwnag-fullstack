@@ -8,6 +8,13 @@ export default (appInfo: EggAppInfo) => {
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + "_1638289748617_6665";
 
+  config.security = {
+    csrf: {
+      queryName: "_csrf", // 通过 query 传递 CSRF token 的默认字段为 _csrf
+      bodyName: "_csrf", // 通过 body 传递 CSRF token 的默认字段为 _csrf
+    },
+  };
+
   // add your egg config in here
   config.middleware = ["seo"];
 
