@@ -10,6 +10,6 @@ export default class LogController extends Controller {
 
     // 设置响应内容和响应状态码
     ctx.status = 200;
-    ctx.set("content-type", "application/json");
+    ctx.set("Content-Type", "application/json;charset=UTF-8");
   }
 }

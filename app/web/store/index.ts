@@ -14,6 +14,8 @@ export const UserSlice = createSlice({
   name: "user",
   initialState: initialUser,
   reducers: {
-    getUserInfo(state, action) {},
+    getUserInfo(state, action) {
+      console.log(state, action);
+    },
   },
 });

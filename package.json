@@ -8,6 +8,7 @@
     "declarations": true
   },
   "scripts": {
+    "start-container": "egg-scripts start --title=egg-server-tiangong-ts-fullstack",
     "start": "egg-scripts start --daemon --title=egg-server-tiangong-ts-fullstack",
     "stop": "egg-scripts stop --title=egg-server-tiangong-ts-fullstack",
     "dev": "egg-bin dev",

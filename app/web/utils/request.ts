@@ -3,6 +3,7 @@ import { getCookie } from "./cookie";
 
 type RequestOptions = {
   headers: Record<string, any>;
+  method: "get" | "post" | "GET" | "POST";
 };
 
 function handleSuccessResponse(data: AxiosResponse) {
@@ -27,7 +28,10 @@ function handleErrorResponse(err: Error) {
   return err;
 }
 
-function request<T>(url: string, options?: RequestOptions): Promise<T> {
+function request<T>(
+  url: string,
+  options?: Partial<RequestOptions>
+): Promise<T> {
   const { headers } = options || {};
   const csrf_authorization = getCookie("csrfToken");
 
@@ -39,10 +43,15 @@ function request<T>(url: string, options?: RequestOptions): Promise<T> {
 
   const axios = Axios.create({
     timeout: 3000,
-    headers,
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+      ...headers,
+    },
   });
 
   axios.interceptors.response.use(handleSuccessResponse, handleErrorResponse);
+
   return axios.get(url, options);
 }
 
