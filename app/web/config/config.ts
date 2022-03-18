@@ -20,4 +20,7 @@ export default {
   title: "天工官网全栈框架",
   favicon:
     "https://lazy-minus-your-intelligence.oss-cn-qingdao.aliyuncs.com/favicon.ico",
+
+  //  性能优化部分
+  // dynamicImport: {},
 };

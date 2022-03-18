@@ -5,7 +5,6 @@ import useFramework from "./useFramework";
 
 export default function Home() {
   const framework: ReturnType<typeof useFramework> = useFramework();
-  console.log(framework);
   return (
     <div>
       <h3>框架首页</h3>
