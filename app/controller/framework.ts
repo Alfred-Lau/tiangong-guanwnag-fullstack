@@ -22,6 +22,6 @@ export default class FrameworkController extends Controller {
     ctx.body = result;
 
     ctx.status = 200;
-    ctx.set("content-type", "application/json");
+    ctx.set("Content-Type", "application/json;charset=UTF-8");
   }
 }
