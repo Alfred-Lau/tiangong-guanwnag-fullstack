@@ -23,7 +23,9 @@
     "clean": "ets clean"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@reduxjs/toolkit": "^1.6.2",
+    "antd": "^4.19.3",
     "axios": "^0.26.0",
     "egg": "^2.6.1",
     "egg-scripts": "^2.6.0",
@@ -33,7 +35,6 @@
     "puppeteer": "^13.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-redux": "^7.2.6",
     "umi": "^3.5.20"
   },
   "devDependencies": {

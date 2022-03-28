@@ -1,358 +1,41 @@
-<!DOCTYPE html><html><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <meta name="keywords" content="工程化, 天工, 烽烟彼岸，网络空间，个人主站">
-    <meta name="description" content="完善的前端工程化体系，包含脚手架，监控，后台，搭建，组件库等">
-    <meta property="og:title" content="烽火彼岸，黄金海滩">
-    <meta property="og:description" content="完善的前端工程化体系，包含脚手架，监控，后台，搭建，组件库等">
-    <meta property="og:image" content="https://lazy-minus-your-intelligence.oss-cn-qingdao.aliyuncs.com/favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="https://lazy-minus-your-intelligence.oss-cn-qingdao.aliyuncs.com/favicon.ico">
-    <link rel="stylesheet" href="/umi.css">
+<!DOCTYPE html><html lang="en" data-prefers-color="light"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="antd,umi,tiangong,ant design,Scaffolding, layout, Ant Design, project, Pro, admin, console, homepage, out-of-the-box, middle and back office, solution, component library">
+    <meta name="description" content="
+    An out-of-box UI solution for enterprise applications as a React boilerplate.">
+    <meta name="description" content="
+      Out-of-the-box mid-stage front-end/design solution.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>天工工程化后台</title>
+    <!-- <link
+      rel="icon"
+      href="/favicon.ico"
+      type="image/x-icon"
+    /> -->
     <script>
       window.routerBase = "/";
     </script>
     <script src="/@@/devScripts.js"></script>
     <script>
-      //! umi version: 3.5.20
+      //! umi version: 3.5.15
     </script>
-    <script src="https://tiangong-tracert.oss-cn-beijing.aliyuncs.com/tiangong-sdk.umd.js"></script>
-  <style type="text/css">.modal {
-  background: #ccc;
-}
-.modal .modal-drop-filter {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  opacity: 0;
-  z-index: 1000;
-  transition: all 0.2s;
-}
-.modal .modal-wrapper {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.modal .modal-wrapper .modal-inner {
-  width: 600px;
-  min-height: 400px;
-}
-.modal .modal-body {
-  opacity: 0;
-  transition: all 0.2s;
-}
-.modal .modal-body .modal-header {
-  background-color: #19afff;
-  color: #fff;
-  padding: 15px 20px;
-  position: relative;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-}
-.modal .modal-body .modal-content {
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-  padding: 20px;
-  background-color: #fff;
-}
-.modal .modal-body .modal-footer {
-  padding: 20px;
-  background-color: #fff;
-}
-.visible .modal-drop-filter {
-  opacity: 0.6;
-}
-.visible .modal-body {
-  opacity: 1;
-  transition: all 0.2s;
-}
-</style><style type="text/css">.cardgroup {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-</style><style type="text/css">.card {
-  border: 1px solid #aaa;
-  outline: none;
-  border: none;
-  width: 20%;
-  padding: 0 6px 0;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-}
-.card .cardWrapper {
-  width: 100%;
-  background: #fff;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 1px 1px 3px 1px rgba(100, 100, 100, 0.3);
-}
-.card .cardWrapper .img {
-  width: 100%;
-}
-.card .cardWrapper .description {
-  padding: 16px;
-  color: #999;
-}
-.card .cardWrapper .link {
-  padding: 16px;
-}
-.card .cardWrapper .link a {
-  text-decoration: none;
-}
-.card .cardWrapper .link a:hover {
-  cursor: pointer;
-}
-</style><style type="text/css">.calendar {
-  width: 400px;
-  background-color: #ffe;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-.calendar-header {
-  height: 40px;
-  font-size: 16px;
-  line-height: 40px;
-  color: #c3c3c3;
-  width: calc(100% - 40px);
-  text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.calendar-header-prev-year:hover,
-.calendar-header-prev-month:hover,
-.calendar-header-next-year:hover,
-.calendar-header-next-month:hover {
-  cursor: pointer;
-}
-.calendar-header-prev-year,
-.calendar-header-prev-month {
-  float: left;
-  padding-right: 15px;
-}
-.calendar-header-next-year,
-.calendar-header-next-month {
-  float: right;
-  padding-left: 15px;
-}
-.calendar-body {
-  width: 100%;
-  margin-bottom: 38px;
-  background-color: #ccc;
-}
-.calendar-body-week {
-  width: 100%;
-}
-.calendar-body-week ul {
-  display: flex;
-  list-style: none;
-  justify-content: space-around;
-  width: 100%;
-  padding: 0;
-}
-.calendar-body-days table {
-  width: 100%;
-  text-align: center;
-}
-.calendar-body-days table td {
-  padding: 8px 0;
-}
-.calendar-body-days table td:hover {
-  cursor: pointer;
-  background-color: #3c3c3c;
-  color: #ccc;
-}
-.calendar-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: #aaa;
-  width: 100%;
-  padding: 8px 0;
-  text-align: center;
-}
-.calendar-footer:hover {
-  cursor: pointer;
-}
-</style><style type="text/css">.tiangong-nav {
-  position: relative;
-  width: 100%;
-  height: 80px;
-  background-color: #ccc;
-  color: antiquewhite;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.tiangong-nav .left {
-  padding: 10px;
-}
-.tiangong-nav .left:first-child a {
-  text-decoration: none;
-  color: #f3f3f3;
-}
-.tiangong-nav .menu-mask {
-  position: absolute;
-  display: none;
-  list-style: none;
-  left: 0;
-  top: 80px;
-  color: #000;
-  background-color: #e8e8e8;
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
-  width: 100%;
-  padding: 20px 5px;
-  box-sizing: border-box;
-}
-.tiangong-nav .menu-mask-active {
-  display: block;
-  z-index: 1;
-}
-.tiangong-nav .menu-mask-active .popover {
-  display: block;
-}
-.tiangong-nav .menu-mask-active .popover-menu-item {
-  cursor: pointer;
-  list-style: none;
-  padding-bottom: 10px;
-}
-.tiangong-nav .menu-main {
-  display: flex;
-  list-style: none;
-}
-.tiangong-nav .menu-main-item {
-  padding-left: 20px;
-  padding-right: 20px;
-  position: relative;
-}
-.tiangong-nav .menu-main-item .popover {
-  position: absolute;
-  display: none;
-}
-.tiangong-nav .menu-main-item .popover-menu {
-  list-style: none;
-  display: flex;
-}
-.tiangong-nav .menu-main-item:hover {
-  cursor: pointer;
-}
-.tiangong-nav .right {
-  display: flex;
-  height: 80px;
-  line-height: 80px;
-  margin-left: auto;
-}
-.tiangong-nav .right .login,
-.tiangong-nav .right .signup {
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-.tiangong-nav .right .login:hover,
-.tiangong-nav .right .signup:hover {
-  cursor: pointer;
-}
-.tiangong-nav .right .login {
-  color: #000;
-}
-.tiangong-nav .right .signup {
-  background-color: #00f;
-  color: #fff;
-}
-@media (max-width: 768px) {
-  .tiangong-nav {
-    background-color: #ccc;
-  }
-}
-</style><style type="text/css">.footer {
-  width: 100%;
-  position: relative;
-  background-color: #333;
-  color: #d3d3d3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 60px 32px;
-  box-sizing: border-box;
-}
-.footer-main {
-  margin-bottom: 20px;
-  width: 100%;
-}
-.footer-main-ul {
-  width: 100%;
-  display: flex;
-  list-style: none;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0;
-}
-.footer-main-ul .item h4 {
-  font-size: 20px;
-}
-.footer-main-ul .item .products {
-  display: flex;
-  list-style: none;
-  flex-direction: column;
-  padding: 0;
-}
-.footer-main-ul .item .products .product-item {
-  padding: 6px 8px;
-}
-.footer-main-ul .item .products .product-item a {
-  text-decoration: none;
-  color: #d3d3d3;
-}
-.footer-main-ul .item .products .product-item:hover {
-  cursor: pointer;
-  color: #f3f3f3;
-}
-.footer .copyright {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  font-size: 14px;
-  line-height: 24px;
-  text-align: center;
-  padding: 6px;
-  padding-bottom: 30px;
-}
-</style><style type="text/css">.table {
-  background-color: #e6e6e6;
-}
-</style><style type="text/css">.part {
-  background-color: #e6e6e6;
-}
-</style><style type="text/css">.sideMenu {
-  background-color: #e6e6e6;
-}
-</style><title>烽火彼岸的网络空间</title></head>
+    <script>
+      !(function () {
+        var e = localStorage.getItem("dumi:prefers-color"),
+          t = window.matchMedia("(prefers-color-scheme: dark)").matches,
+          r = ["light", "dark", "auto"];
+        document.documentElement.setAttribute(
+          "data-prefers-color",
+          e === r[2] ? (t ? r[1] : r[0]) : r.includes(e) ? e : r[0]
+        );
+      })();
+    </script>
+  <link rel="stylesheet" type="text/css" href="/mf-dep_src_umi_cache_mfsu_mf-va_antd_es_config-provider_style_js.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_empty_style_index_less-node_modules_antd_es_select_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_src_umi_cache_mfsu_mf-va_antd_es_auto-complete_style_js.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_grid_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_pagination_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_list_style_index_less-node_modules_antd_es_spin_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_button_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_dropdown_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_src_umi_cache_mfsu_mf-va__ant-design_pro-layout_es_PageLoading_js-node_modules_antd_es_spin_s-29a71a.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_input_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_avatar_style_index_less-node_modules_antd_es_popover_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/src_components_HeaderDropdown_index_less_modules.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_node_modules_ant-design_icons_es_icons_LoadingOutlined_js-node_modules_babel_runtime_helpers_-b6927c.chunk.css"><link rel="stylesheet" type="text/css" href="/src_components_NoticeIcon_NoticeList_less_modules.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_src_umi_cache_mfsu_mf-va_antd_es_badge_style_js.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_src_umi_cache_mfsu_mf-va_antd_es_spin_style_js.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_tabs_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/src_components_HeaderSearch_index_less_modules.chunk.css"><link rel="stylesheet" type="text/css" href="/src_components_NoticeIcon_index_less_modules.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_menu_style_index_less-node_modules_antd_es_tooltip_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_ant-design_icons_es_icons_CopyOutlined_js-node_modules_ant-design_icons_-1c332f.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_ant-design_pro-layout_es_index_js-node_modules_antd_es__util_transButton-8ea21e.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_src_umi_cache_mfsu_mf-va_antd_es_message_style_js.chunk.css"><link rel="stylesheet" type="text/css" href="/src_components_RightContent_index_less_modules.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_src_umi_cache_mfsu_mf-va_antd_es_notification_style_js.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_src_umi_cache_mfsu_mf-va_antd_es_tag_style_js.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_src_umi_cache_mfsu_mf-va_antd_es_space_style_js.chunk.css"><link rel="stylesheet" type="text/css" href="/src_global_less.chunk.css"></head>
   <body>
-    <div id="root"><div class="layout___1XhSp"><div class="breadcrumbNavigation___2w6RF">我是汉堡包导航</div><div class="footer"><div class="footer-main"><ul class="footer-main-ul"><li class="item"><h4>相关站点</h4><ul class="products"><li class="product-item"><a href="" target="_blank">工具类站点</a></li><li class="product-item"><a href="" target="_blank">咨询类站点</a></li><li class="product-item"><a href="" target="_blank">电商类站点</a></li><li class="product-item"><a href="" target="_blank">其他</a></li></ul></li><li class="item"><h4>明日之屋</h4><ul class="products"><li class="product-item"><a href="" target="_blank">凡有出</a></li><li class="product-item"><a href="" target="_blank">必有用</a></li><li class="product-item"><a href="" target="_blank">念念不忘</a></li><li class="product-item"><a href="" target="_blank">必有回想</a></li></ul></li><li class="item"><h4>联系我</h4><ul class="products"><li class="product-item"><a href="https://lazy-minus-your-intelligence.com/" target="_blank">主站</a></li><li class="product-item"><a href="https://github.com/Alfred-Lau" target="_blank">GitHub</a></li><li class="product-item"><a href="" target="_blank">掘金</a></li><li class="product-item"><a href="" target="_blank">思否</a></li><li class="product-item"><a href="" target="_blank">拉勾</a></li></ul></li><li class="item"><h4>更多套件</h4><ul class="products"><li class="product-item"><a href="http://docs.lazy-minus-your-intelligence.com/parts/tracert.html" target="_blank">数据采集</a></li><li class="product-item"><a href="http://docs.lazy-minus-your-intelligence.com/parts/tracert.html" target="_blank">性能分析</a></li><li class="product-item"><a href="http://docs.lazy-minus-your-intelligence.com/parts/cli.html" target="_blank">脚手架</a></li><li class="product-item"><a href="http://docs.lazy-minus-your-intelligence.com/parts/build.html" target="_blank">搭建</a></li><li class="product-item"><a href="http://docs.lazy-minus-your-intelligence.com/parts/component.html" target="_blank">垂直场景解决方案</a></li></ul></li></ul></div><div class="copyright">烽火彼岸，黄金沙滩</div></div></div></div>
+    <noscript>天工工程化后台</noscript>
+    <div id="root"><div style="padding-top: 100px; text-align: center;"><div data-inspector-line="16" data-inspector-column="11" data-inspector-relative-path="src/app.tsx" class="ant-spin ant-spin-lg ant-spin-spinning"><span class="ant-spin-dot ant-spin-dot-spin"><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i></span></div></div></div>
 
-    <script>
-      document.write(
-        unescape(
-          "%3Cscript src='https://s9.cnzz.com/z_stat.php?id=1280463003&web_id=1280463003' type='text/javascript'%3E%3C/script%3E"
-        )
-      );
-    </script><script src="https://s9.cnzz.com/z_stat.php?id=1280463003&amp;web_id=1280463003" type="text/javascript"></script><script src="https://c.cnzz.com/core.php?web_id=1280463003&amp;t=z" charset="utf-8" type="text/javascript"></script>
-    <script>
-      document.body.removeChild(document.querySelector('a[title="站长统计"]'));
-    </script>
     <script src="/umi.js"></script>
   
 

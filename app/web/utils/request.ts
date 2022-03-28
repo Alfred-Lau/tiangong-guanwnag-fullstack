@@ -28,7 +28,7 @@ function handleErrorResponse(err: Error) {
 }
 
 function request<T>(url: string, options?: RequestOptions): Promise<T> {
-  const { headers } = options || {};
+  const { headers = {} } = options || {};
   const csrf_authorization = getCookie("csrfToken");
 
   if (csrf_authorization) {

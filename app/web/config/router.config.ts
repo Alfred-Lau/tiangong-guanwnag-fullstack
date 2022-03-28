@@ -14,6 +14,11 @@ export default [
         name: "about",
         component: "about",
       },
+      {
+        path: "/doc",
+        name: "doc",
+        component: "doc",
+      },
     ],
   },
   { component: "404" },

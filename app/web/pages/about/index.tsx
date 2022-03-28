@@ -1,11 +1,16 @@
-import { dynamic } from "umi";
+import React from "react";
+import styles from "./index.less";
 
-export default dynamic({
-  loader: async function () {
-    // 这里的注释 webpackChunkName 可以指导 webpack 将该组件 HugeA 以这个名字单独拆出去
-    const { default: About } = await import(
-      /* webpackChunkName: "about" */ "./about"
-    );
-    return About;
-  },
-});
+export type AboutProps = { title: string; subtitle: string };
+
+export default function About(
+  props: React.PropsWithChildren<Partial<AboutProps>>
+) {
+  const { title, subtitle } = props;
+  return (
+    <div className={styles.about}>
+      <h3>关于本站{title}</h3>
+      <p>{subtitle}</p>
+    </div>
+  );
+}
