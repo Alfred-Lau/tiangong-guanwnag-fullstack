@@ -7,4 +7,6 @@ declare namespace TianGong {
   type FrameworkModel = {
     features: feature[];
   };
+
+  type Category = {};
 }

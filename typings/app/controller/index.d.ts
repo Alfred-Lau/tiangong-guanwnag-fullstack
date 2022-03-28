@@ -2,17 +2,21 @@
 // Do not modify this file!!!!!!!!!
 
 import 'egg';
-import ExportFramework from '../../../app/controller/framework';
-import ExportHome from '../../../app/controller/home';
+import ExportApiDoc from '../../../app/controller/api/doc';
+import ExportApiFramework from '../../../app/controller/api/framework';
 import ExportApiLog from '../../../app/controller/api/log';
+import ExportPagesHome from '../../../app/controller/pages/home';
 import ExportToolsUpload from '../../../app/controller/tools/upload';
 
 declare module 'egg' {
   interface IController {
-    framework: ExportFramework;
-    home: ExportHome;
     api: {
+      doc: ExportApiDoc;
+      framework: ExportApiFramework;
       log: ExportApiLog;
+    }
+    pages: {
+      home: ExportPagesHome;
     }
     tools: {
       upload: ExportToolsUpload;
