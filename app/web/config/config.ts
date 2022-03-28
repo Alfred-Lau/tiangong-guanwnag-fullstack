@@ -23,7 +23,9 @@ export default {
   title: "天工官网全栈框架",
   favicon:
     "https://lazy-minus-your-intelligence.oss-cn-qingdao.aliyuncs.com/favicon.ico",
-  antd: {},
+  // antd: {
+  //   dark: true,
+  // },
 
   //  性能优化部分
   // dynamicImport: {},

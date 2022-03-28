@@ -1,40 +1,21 @@
-<!DOCTYPE html><html lang="en" data-prefers-color="light"><head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="antd,umi,tiangong,ant design,Scaffolding, layout, Ant Design, project, Pro, admin, console, homepage, out-of-the-box, middle and back office, solution, component library">
-    <meta name="description" content="
-    An out-of-box UI solution for enterprise applications as a React boilerplate.">
-    <meta name="description" content="
-      Out-of-the-box mid-stage front-end/design solution.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>天工工程化后台</title>
-    <!-- <link
-      rel="icon"
-      href="/favicon.ico"
-      type="image/x-icon"
-    /> -->
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" type="image/x-icon" href="https://lazy-minus-your-intelligence.oss-cn-qingdao.aliyuncs.com/favicon.ico">
+    <link rel="stylesheet" href="/umi.css">
     <script>
       window.routerBase = "/";
     </script>
+    <script>
+      window.publicPath = window.resourceBaseUrl || "/";
+    </script>
     <script src="/@@/devScripts.js"></script>
     <script>
-      //! umi version: 3.5.15
+      //! umi version: 3.5.20
     </script>
-    <script>
-      !(function () {
-        var e = localStorage.getItem("dumi:prefers-color"),
-          t = window.matchMedia("(prefers-color-scheme: dark)").matches,
-          r = ["light", "dark", "auto"];
-        document.documentElement.setAttribute(
-          "data-prefers-color",
-          e === r[2] ? (t ? r[1] : r[0]) : r.includes(e) ? e : r[0]
-        );
-      })();
-    </script>
-  <link rel="stylesheet" type="text/css" href="/mf-dep_src_umi_cache_mfsu_mf-va_antd_es_config-provider_style_js.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_empty_style_index_less-node_modules_antd_es_select_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_src_umi_cache_mfsu_mf-va_antd_es_auto-complete_style_js.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_grid_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_pagination_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_list_style_index_less-node_modules_antd_es_spin_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_button_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_dropdown_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_src_umi_cache_mfsu_mf-va__ant-design_pro-layout_es_PageLoading_js-node_modules_antd_es_spin_s-29a71a.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_input_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_avatar_style_index_less-node_modules_antd_es_popover_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/src_components_HeaderDropdown_index_less_modules.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_node_modules_ant-design_icons_es_icons_LoadingOutlined_js-node_modules_babel_runtime_helpers_-b6927c.chunk.css"><link rel="stylesheet" type="text/css" href="/src_components_NoticeIcon_NoticeList_less_modules.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_src_umi_cache_mfsu_mf-va_antd_es_badge_style_js.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_src_umi_cache_mfsu_mf-va_antd_es_spin_style_js.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_tabs_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/src_components_HeaderSearch_index_less_modules.chunk.css"><link rel="stylesheet" type="text/css" href="/src_components_NoticeIcon_index_less_modules.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_antd_es_menu_style_index_less-node_modules_antd_es_tooltip_style_index_less.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_ant-design_icons_es_icons_CopyOutlined_js-node_modules_ant-design_icons_-1c332f.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_vendors-node_modules_ant-design_pro-layout_es_index_js-node_modules_antd_es__util_transButton-8ea21e.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_src_umi_cache_mfsu_mf-va_antd_es_message_style_js.chunk.css"><link rel="stylesheet" type="text/css" href="/src_components_RightContent_index_less_modules.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_src_umi_cache_mfsu_mf-va_antd_es_notification_style_js.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_src_umi_cache_mfsu_mf-va_antd_es_tag_style_js.chunk.css"><link rel="stylesheet" type="text/css" href="/mf-dep_src_umi_cache_mfsu_mf-va_antd_es_space_style_js.chunk.css"><link rel="stylesheet" type="text/css" href="/src_global_less.chunk.css"></head>
+  <title>天工官网全栈框架</title></head>
   <body>
-    <noscript>天工工程化后台</noscript>
-    <div id="root"><div style="padding-top: 100px; text-align: center;"><div data-inspector-line="16" data-inspector-column="11" data-inspector-relative-path="src/app.tsx" class="ant-spin ant-spin-lg ant-spin-spinning"><span class="ant-spin-dot ant-spin-dot-spin"><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i></span></div></div></div>
+    <div id="root"><div class="layout"></div></div>
 
     <script src="/umi.js"></script>
   

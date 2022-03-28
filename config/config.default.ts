@@ -40,6 +40,8 @@ export default (appInfo: EggAppInfo) => {
   };
 
   config.assets = {
+    templatePath: path.join(appInfo.baseDir, "app/view/index.html"),
+    // templateViewEngine: "nunjucks",
     publicPath: "/public",
     devServer: {
       autoPort: true,
@@ -49,6 +51,8 @@ export default (appInfo: EggAppInfo) => {
         APP_ROOT: process.cwd() + "/app/web",
         BROWSER: "none",
         // SOCKET_SERVER: "http://127.0.0.1:{port}",
+        SOCKET_SERVER: "http://127.0.0.1:8000",
+        PUBLIC_PATH: "http://127.0.0.1:8000",
       },
       debug: true,
     },
