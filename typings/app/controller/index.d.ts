@@ -6,6 +6,7 @@ import ExportApiDoc from '../../../app/controller/api/doc';
 import ExportApiFramework from '../../../app/controller/api/framework';
 import ExportApiLog from '../../../app/controller/api/log';
 import ExportPagesHome from '../../../app/controller/pages/home';
+import ExportToolsRender from '../../../app/controller/tools/render';
 import ExportToolsUpload from '../../../app/controller/tools/upload';
 
 declare module 'egg' {
@@ -19,6 +20,7 @@ declare module 'egg' {
       home: ExportPagesHome;
     }
     tools: {
+      render: ExportToolsRender;
       upload: ExportToolsUpload;
     }
   }

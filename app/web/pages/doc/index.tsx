@@ -9,10 +9,9 @@ const { Content, Sider } = Layout;
 const Doc: FC = () => {
   return (
     <div className={styles.doc}>
-      sss
       <Layout className={styles["doc-container"]}>
         <Sider theme={"light"}>
-          <Category data={[{}]}></Category>
+          <Category data={[{}]} />
         </Sider>
         <Content>main content</Content>
       </Layout>

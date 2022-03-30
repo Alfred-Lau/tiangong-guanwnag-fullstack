@@ -27,6 +27,13 @@ export default (app: Application) => {
   // 上报相关接口
   router.post("log/postLog", "/api/v1/log", controller.api.log.postLog);
 
+  // 工程化相关接口
+  router.get(
+    "engine/render",
+    "/render/t/p/:pageId",
+    controller.tools.render.render
+  );
+
   // 模板页面【该页面要生效，不可以使用 router.prefix 来进行前缀，这是全栈框架和api bff的区别】
   router.get("home", "*", controller.pages.home.index);
 };
