@@ -8,7 +8,6 @@ export default (options) => {
     const url = ctx.path;
     try {
       if (!ctx.isAPI()) {
-        console.log("ctx.isAPI()", ctx.isAPI(), ctx.isSpider(), url);
         if (url && ctx.isSpider()) {
           const target = pages.find((p) => p.path === url);
 

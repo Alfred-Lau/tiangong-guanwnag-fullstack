@@ -33,6 +33,11 @@ export default (app: Application) => {
     "/render/t/p/:pageId",
     controller.tools.render.render
   );
+  router.get(
+    "engine/preview",
+    "/preview/:url",
+    controller.tools.preview.preview
+  );
 
   // 模板页面【该页面要生效，不可以使用 router.prefix 来进行前缀，这是全栈框架和api bff的区别】
   router.get("home", "*", controller.pages.home.index);
