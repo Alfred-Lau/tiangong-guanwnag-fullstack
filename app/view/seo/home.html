@@ -1,23 +1,220 @@
 <!DOCTYPE html><html><head>
+    <script type="text/javascript" async="" charset="utf-8" src="https://c.cnzz.com/core.php?web_id=1279230379&amp;t=z"></script><script async="" src="https://gw.alipayobjects.com/os/lib/alipay/yuyan-monitor-web/3.1.0/dist/index.umd.min.js" crossorigin="anonymous"></script><script>
+      !(function () {
+        var e = window;
+        function n(n) {
+          if (e.g_monitor && e.g_monitor.events) {
+            var t = e.g_monitor.events;
+            t.length < 20 && t.push(n);
+          }
+        }
+        e.g_monitor = e.g_monitor || { listener: {}, events: [] };
+        var r = e.g_monitor.listener;
+        function t(t, n) {
+          try {
+            e.addEventListener
+              ? e.addEventListener(t, n, !0)
+              : e.attachEvent
+              ? e.attachEvent("on" + t, n)
+              : (e[t] = n),
+              (r[t] = n);
+          } catch (n) {
+            console.warn("Tracert 监控事件注册失败：" + t, n);
+          }
+        }
+        r.error || t("error", n),
+          r.unhandledrejection || t("unhandledrejection", n);
+      })();
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="shortcut icon" type="image/x-icon" href="https://lazy-minus-your-intelligence.oss-cn-qingdao.aliyuncs.com/favicon.ico">
-    <link rel="stylesheet" href="/umi.css">
+    <meta name="baidu-site-verification" content="code-CvuIRd2ted">
+    <meta name="google-site-verification" content="-dl2EkjFe6Sqxjglc_MwueJoDI6sU4oeE1gP4tbnPa4">
+    <meta name="keywords" content="国产数据库,数据库,信创,分布式数据库,HTAP,两地三中心,云原生,分布式,原生分布式,原生分布式数据库,Oracle兼容,MySQL兼容,Oracle,MySQL,开源,高可用,透明扩展,多租户,三地五中心,无损容灾,异地容灾,企业级,自研,全自研,自主知识产权,大数据,混合云,多云,跨云,OBCA,OBCP,OBCE,tidb,cockroachdb,yogabytes">
+    <meta name="description" content="OceanBase100%自主研发，连续9年稳定支撑双11，创新推出“三地五中心”城市级容灾新标准，是全球唯一在TPC-C和TPC-H测试上都刷新了世界纪录的国产原生分布式数据库，具备高可用、高扩展、高兼容、易管理、部署灵活、高性价比等特点，已助力200+行业客户实现核心系统升级。">
+    <meta name="bm_app_id" content="">
+    <meta name="bm_sprint_id" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="https://gw.alipayobjects.com/mdn/ob_asset/afts/img/A*g8CnQbMggjwAAAAAAAAAAAAAARQnAQ">
+    <link charset="utf-8" rel="stylesheet" type="text/css" href="https://gw.alipayobjects.com/os/skylark-tools/NDPauKrNZgrzgNGvRZwe.css">
+    <link charset="utf-8" rel="stylesheet" type="text/css" href="https://a.alipayobjects.com/g/lark/lark-markdown/1.3.18/default.css">
+    <link charset="utf-8" rel="stylesheet" type="text/css" href="https://gw.alipayobjects.com/os/rmsportal/kkVovwezlhMkxAPyEWpU.css">
+    <link charset="utf-8" rel="stylesheet" type="text/css" href="https://gw.alipayobjects.com/os/chair-script/skylark/doc-d2abff0e4bfc16fed1df.css">
+    <link rel="stylesheet" href="./umi.css">
     <script>
       window.routerBase = "/";
     </script>
     <script>
-      window.publicPath = window.resourceBaseUrl || "/";
+      window.publicPath = window.resourceBaseUrl || "./";
     </script>
-    <script src="/@@/devScripts.js"></script>
+    <script src="./@@/devScripts.js" crossorigin="anonymous"></script>
     <script>
-      //! umi version: 3.5.20
+      //! umi version: 3.5.21
     </script>
-  <title>天工官网全栈框架</title></head>
+    <script>
+      //! bigfish version: 3.9.24
+    </script>
+    <script src="https://s9.cnzz.com/z_stat.php?id=1279230379&amp;web_id=1279230379" async="true"></script>
+    <script>
+      // prettier-ignore
+      !function(n,o,e,t,a,i){n.yuyanMonitor={config: function(){}, logError: function() {}, log: function(){}};var r=o.createElement("script"),c=o.getElementsByTagName("script")[0];
+        r.async=1,r.src="https://gw.alipayobjects.com/os/lib/alipay/yuyan-monitor-web/3.1.0/dist/index.umd.min.js",r.crossOrigin="anonymous",r.onload=function(){
+          YuyanMonitor&&(n.yuyanMonitor=new YuyanMonitor({"isH5":false,"_appId":"","yuyanId":"","sprintId":""})); n.injectInfo && n.yuyanMonitor.config({ env: n.injectInfo.env })},
+          c.parentNode.insertBefore(r,c)}(window,window.document)
+    </script>
+  <script>window.linksConfig = {
+  appId: '5fc45b6fcd068c05d4b4d3cb',
+  origin: 'https://oblinks.alipay.com',
+  widgetType: 'default',
+  webpackPublicPath: 'https://gw.alipayobjects.com/as/g/dsc/links-frontend/3.75.2/',
+  bizScene: 'ob',
+  position: {
+    right: '0px',
+      bottom: '12px',
+    }
+};
+if(window.LinkS && typeof window.LinkS.destroy === 'function' && typeof window.LinkS.build === 'function'){
+  window.LinkS.destroy();
+  window.LinkS.build();
+} else {
+  var script = document.createElement('script');
+  script.src = 'https://gw.alipayobjects.com/as/g/dsc/links-frontend/3.75.2/widget-boot-up.js';
+  script.charset = "UTF-8";
+  document.head.appendChild(script);
+}</script><script src="https://gw.alipayobjects.com/as/g/dsc/links-frontend/3.75.2/widget-boot-up.js" charset="UTF-8"></script><style>iframe.links-widget-iframe {
+  position: fixed;
+  background-color: transparent;
+  border: none;
+  z-index: 2147483646;
+}
+iframe.links-widget-iframe.pending {
+  display: none;
+}
+iframe.links-widget-iframe.widget-default {
+  width: 88px;
+  height: 68px;
+  transition: transform 0.1s ease-in-out;
+}
+iframe.links-widget-iframe.widget-default.active {
+  width: 420px;
+  min-height: 350px;
+  max-height: 676px;
+  height: calc(100% - 70px);
+}
+iframe.links-widget-iframe.widget-default.active.search-detail-mode {
+  width: 760px;
+}
+iframe.links-widget-iframe.widget-default:not(.active).has-tips-switch {
+  height: 120px;
+}
+iframe.links-widget-iframe.widget-default:not(.active).has-tips-switch-popover {
+  width: 250px;
+}
+iframe.links-widget-iframe.widget-default:not(.active).show-welcome-message {
+  width: 390px;
+}
+iframe.links-widget-iframe.widget-default.minimized {
+  transform: translateX(64px);
+}
+iframe.links-widget-iframe.widget-default.fullscreen {
+  width: 100vw !important;
+  height: 100vh !important;
+  max-height: 100vh !important;
+  left: 0 !important;
+  bottom: 0 !important;
+}
+iframe.links-widget-iframe.widget-cube {
+  width: 50px;
+  height: 0;
+  transition: right 0.1s ease-in-out;
+  position: fixed;
+  right: 0 !important;
+  transform: translateY(-50%);
+}
+iframe.links-widget-iframe.widget-cube.size-1 {
+  height: 56px;
+}
+iframe.links-widget-iframe.widget-cube.size-1:hover {
+  height: 116px;
+}
+iframe.links-widget-iframe.widget-cube.size-2 {
+  height: 112px;
+}
+iframe.links-widget-iframe.widget-cube.size-2:hover {
+  height: 172px;
+}
+iframe.links-widget-iframe.widget-cube.size-3 {
+  height: 168px;
+}
+iframe.links-widget-iframe.widget-cube.size-3:hover {
+  height: 228px;
+}
+iframe.links-widget-iframe.widget-cube.size-4 {
+  height: 224px;
+}
+iframe.links-widget-iframe.widget-cube.size-4:hover {
+  height: 284px;
+}
+iframe.links-widget-iframe.widget-cube.has-tips-switch-popover {
+  width: 250px;
+}
+iframe.links-widget-iframe.widget-cube.minimized {
+  right: -40px !important;
+}
+iframe.links-widget-iframe.widget-cube.active {
+  width: 446px;
+  height: 630px !important;
+}
+iframe.links-widget-iframe.widget-cube.active.fullscreen {
+  width: 100vw !important;
+  height: 100vh !important;
+  top: 0 !important;
+  right: 0 !important;
+  transform: none !important;
+}
+iframe.links-widget-iframe.widget-bootstrap {
+  width: 88px;
+  height: 94px;
+}
+iframe.links-widget-iframe.widget-assistant {
+  width: 94px;
+  height: 77px;
+  right: 0 !important;
+  transition: transform 0.1s ease-in-out;
+}
+iframe.links-widget-iframe.widget-assistant.minimized {
+  transform: translateX(70px);
+  height: 77px !important;
+  width: 94px !important;
+}
+iframe.links-widget-iframe.widget-assistant.has-more-tips-switch {
+  height: 184px;
+  width: 220px;
+}
+iframe.links-widget-iframe.widget-assistant.has-no-tips-switch {
+  height: 0;
+  width: 0;
+}
+iframe.links-widget-iframe.widget-assistant.has-tips-switch-popover {
+  width: 220px;
+}
+</style></head>
   <body>
-    <div id="root"><div class="layout"></div></div>
+    <div id="root"></div>
 
-    <script src="/umi.js"></script>
+    <script>
+      (function bootstrap() {
+        const isMobileDevice =
+          window.matchMedia && window.matchMedia("(max-width: 600px)");
+        if (!isMobileDevice.matches) {
+          const ele = document.createElement("script");
+          ele.src =
+            "https://oblinks.alipay.com/widgetInit/5fc45b6fcd068c05d4b4d3cb";
+          document.body.appendChild(ele);
+        }
+      })();
+    </script><script src="https://oblinks.alipay.com/widgetInit/5fc45b6fcd068c05d4b4d3cb"></script>
+    <script src="https://gosspublic.alicdn.com/aliyun-oss-sdk-6.16.0.min.js"></script>
+    <script src="./umi.js" crossorigin="anonymous"></script><iframe id="links-widget-iframe" class="links-widget-iframe widget-default" src="https://oblinks.alipay.com/widget/room/5fc45b6fcd068c05d4b4d3cb/" style="bottom: 12px; right: 0px;"></iframe><div id="links-tip-container"><div style="position: absolute; top: 0px; left: 0px;"></div></div>
   
 
-</body></html>
+<iframe src="https://tracert.alipay.com/cross.html" style="width: 1px; height: 1px; position: absolute; left: -100px; bottom: -100px; display: none;"></iframe><iframe src="https://tracert.alipay.com/cross.html" style="width: 1px; height: 1px; position: absolute; left: -100px; bottom: -100px; display: none;"></iframe></body></html>
