@@ -1,6 +1,9 @@
 import { EggAppConfig, EggAppInfo, PowerPartial } from "egg";
 import path from "path";
 
+const d = new Date();
+const folderName = `${d.getDay()}-${d.getHours()}`;
+
 function join(...args) {
   return path.join(...args);
 }
@@ -34,14 +37,21 @@ export default (appInfo: EggAppInfo) => {
     site: "https://lazy-minus-your-intelligence.com",
     basePath: join(appInfo.baseDir, "app", "view"),
     // 需要 进行seo的页面 url 和 对应模板名称
-    pages: [{ path: "/home", name: "home.html" }],
+    pages: [{ path: "/", name: "index.html" }],
   };
 
   // render 基础的配置
   config.render = {
-    basePath: join(appInfo.baseDir, "app", "public"),
+    basePath: join(appInfo.baseDir, "app", "public", folderName),
     site: "https://lazy-minus-your-intelligence.com",
-    pages: [{ path: "/home", name: "home.html" }],
+    pages: [{ path: "/", name: "index.html" }],
+  };
+
+  config.h5render = {
+    device: {
+      height: 3000,
+      width: 1800,
+    },
   };
 
   config.storage = {

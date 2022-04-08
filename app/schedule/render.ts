@@ -12,7 +12,7 @@ export default {
     const res = { data: [] };
 
     if (ctx.app.config.env === "local") {
-      ctx.logger.info(`本地环境开始静态生成页面`);
+      ctx.logger.info(`本地环境开始巡检截图`);
       await ctx.service.render.snapshot();
       ctx.app.cache = res.data;
     }

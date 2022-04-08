@@ -22,3 +22,5 @@ config/**/*.map
 app/web/.umi
 package-lock.json
 .umi/**
+
+.env

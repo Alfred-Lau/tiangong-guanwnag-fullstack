@@ -9,7 +9,20 @@ export default class RenderController extends Controller {
 
   public async snapshot() {
     const { ctx } = this;
-    const { basePath } = ctx.app.config.render;
-    ctx.logger.info("basePath", basePath);
+
+    let uploadResult;
+
+    try {
+      const { success, filepath } = await ctx.service.render.snapshot();
+      if (success) {
+        uploadResult = await ctx.service.oss.upload(filepath);
+      } else {
+        uploadResult = null;
+      }
+    } catch (e) {
+      ctx.logger.error(e);
+    }
+
+    ctx.body = uploadResult;
   }
 }
