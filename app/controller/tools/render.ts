@@ -16,6 +16,7 @@ export default class RenderController extends Controller {
       const { success, filepath } = await ctx.service.render.snapshot();
       if (success) {
         uploadResult = await ctx.service.oss.upload(filepath);
+        // TODO: 上传数据传入数据库
       } else {
         uploadResult = null;
       }
