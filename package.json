@@ -25,6 +25,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@reduxjs/toolkit": "^1.6.2",
+    "ali-oss": "^6.17.1",
     "antd": "^4.19.3",
     "axios": "^0.26.0",
     "egg": "^2.6.1",

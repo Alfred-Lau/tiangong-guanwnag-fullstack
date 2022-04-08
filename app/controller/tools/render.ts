@@ -6,4 +6,10 @@ export default class RenderController extends Controller {
     // await ctx.render("index.html");
     ctx.body = ctx.params.pageId;
   }
+
+  public async snapshot() {
+    const { ctx } = this;
+    const { basePath } = ctx.app.config.render;
+    ctx.logger.info("basePath", basePath);
+  }
 }

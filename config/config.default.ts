@@ -1,5 +1,9 @@
 import { EggAppConfig, EggAppInfo, PowerPartial } from "egg";
-import * as path from "path";
+import path from "path";
+
+function join(...args) {
+  return path.join(...args);
+}
 
 export default (appInfo: EggAppInfo) => {
   const config = {} as PowerPartial<EggAppConfig>;
@@ -28,8 +32,15 @@ export default (appInfo: EggAppInfo) => {
   // seo 部分的支持
   config.seo = {
     site: "https://lazy-minus-your-intelligence.com",
-    basePath: path.join(appInfo.baseDir, "app", "view"),
+    basePath: join(appInfo.baseDir, "app", "view"),
     // 需要 进行seo的页面 url 和 对应模板名称
+    pages: [{ path: "/home", name: "home.html" }],
+  };
+
+  // render 基础的配置
+  config.render = {
+    basePath: join(appInfo.baseDir, "app", "public"),
+    site: "https://lazy-minus-your-intelligence.com",
     pages: [{ path: "/home", name: "home.html" }],
   };
 
