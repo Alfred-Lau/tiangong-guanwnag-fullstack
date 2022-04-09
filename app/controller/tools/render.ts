@@ -26,4 +26,20 @@ export default class RenderController extends Controller {
 
     ctx.body = uploadResult;
   }
+
+  public async download() {
+    const { ctx } = this;
+    const { filename } = ctx.request.body;
+
+    ctx.validate({
+      filename: "string",
+    });
+
+    try {
+      const result = await ctx.service.oss.download(filename);
+      ctx.body = ctx.formatControllerResponse(result, "success");
+    } catch (e) {
+      ctx.body = ctx.formatControllerResponse(e, "error");
+    }
+  }
 }

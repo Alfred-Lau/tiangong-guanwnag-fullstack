@@ -1,5 +1,5 @@
 import { Context } from "egg";
-console.log(process.client);
+import fs from "fs/promises";
 
 const API_REG = /^\/api\//;
 const BAIDU_SPIDER = /^BAIDU_SPIDER/;
@@ -21,5 +21,43 @@ export default {
       }
     }
     return flag;
+  },
+
+  formatControllerResponse(result: any, type: "success" | "error") {
+    if (type === "success") {
+      return {
+        success: true,
+        errMsg: null,
+        data: result,
+      };
+    } else {
+      return {
+        success: false,
+        errMsg: result,
+        data: null,
+      };
+    }
+  },
+
+  async ensurePath(basePath: string) {
+    await fs.rm(basePath, {
+      recursive: true,
+      force: true,
+    });
+
+    try {
+      await fs.access(basePath);
+    } catch (e) {
+      await fs.mkdir(basePath);
+    }
+  },
+  info(this: Context, msg: string) {
+    this.logger.info(msg);
+  },
+  error(this: Context, msg: string) {
+    this.logger.error(msg);
+  },
+  warn(this: Context, msg: string) {
+    this.logger.warn(msg);
   },
 };

@@ -60,6 +60,11 @@ export default (appInfo: EggAppInfo) => {
     },
   };
 
+  // 下载配置
+  config.download = {
+    downloadPath: join(appInfo.baseDir, "app/download"),
+  };
+
   config.assets = {
     templatePath: path.join(appInfo.baseDir, "app/view/index.html"),
     // templateViewEngine: "nunjucks",
@@ -86,7 +91,7 @@ export default (appInfo: EggAppInfo) => {
 
   // the return config will combines to EggAppConfig
   return {
-    ...config,
+    ...(config as {}),
     ...bizConfig,
   };
 };

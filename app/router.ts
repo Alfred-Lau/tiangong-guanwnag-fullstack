@@ -25,6 +25,8 @@ export default (app: Application) => {
   router.get("/api/preview/:url", controller.tools.preview.preview);
   // 巡检服务 【定时触发、接口触发】
   router.get("/api/render/snapshot", controller.tools.render.snapshot);
+  // 巡检服务 【下载文件到服务器】
+  router.post("/api/render/download", controller.tools.render.download);
 
   // 模板页面【该页面要生效，不可以使用 router.prefix 来进行前缀，这是全栈框架和api bff的区别】
   router.get("home", "*", controller.pages.home.index);

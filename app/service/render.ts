@@ -59,7 +59,7 @@ class RenderService extends Service {
 
         return body.outerHTML;
       };
-      await this.ensurePath(basePath);
+      await this.ctx.ensurePath(basePath);
 
       for (let i = 0; i < pages.length; i++) {
         const { path: pagePath, name } = pages[i];
@@ -90,19 +90,6 @@ class RenderService extends Service {
     } catch (error) {
       this.ctx.logger.error(error);
       return null;
-    }
-  }
-
-  private async ensurePath(basePath) {
-    await fs.rm(basePath, {
-      recursive: true,
-      force: true,
-    });
-
-    try {
-      await fs.access(basePath);
-    } catch (e) {
-      await fs.mkdir(basePath);
     }
   }
 }
