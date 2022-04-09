@@ -17,6 +17,11 @@ export default class RenderController extends Controller {
       if (success) {
         uploadResult = await ctx.service.oss.upload(filepath);
         // TODO: 上传数据传入数据库
+        const insertResult = await ctx.service.render.insertRecords(
+          uploadResult
+        );
+
+        ctx.info(insertResult as string);
       } else {
         uploadResult = null;
       }

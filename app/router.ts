@@ -27,6 +27,7 @@ export default (app: Application) => {
   router.get("/api/render/snapshot", controller.tools.render.snapshot);
   // 巡检服务 【下载文件到服务器】
   router.post("/api/render/download", controller.tools.render.download);
+  // 插入数据库数据
 
   // 模板页面【该页面要生效，不可以使用 router.prefix 来进行前缀，这是全栈框架和api bff的区别】
   router.get("home", "*", controller.pages.home.index);

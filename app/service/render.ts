@@ -92,6 +92,22 @@ class RenderService extends Service {
       return null;
     }
   }
+
+  async insertRecords(records) {
+    const { ctx } = this;
+    await ctx.model.Render.findAll({});
+    const result = [] as any;
+    try {
+      for (const record of records) {
+        const ret = await ctx.model.Render.create(record);
+        result.push(ret);
+      }
+      console.log(result);
+      return result;
+    } catch (error) {
+      return error;
+    }
+  }
 }
 
 export default RenderService;

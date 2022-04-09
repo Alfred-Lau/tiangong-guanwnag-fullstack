@@ -65,6 +65,15 @@ export default (appInfo: EggAppInfo) => {
     downloadPath: join(appInfo.baseDir, "app/download"),
   };
 
+  config.sequelize = {
+    dialect: "mysql",
+    host: "localhost",
+    username: "root",
+    password: "liujian10086",
+    port: 3306,
+    database: "tiangongtest",
+  };
+
   config.assets = {
     templatePath: path.join(appInfo.baseDir, "app/view/index.html"),
     // templateViewEngine: "nunjucks",

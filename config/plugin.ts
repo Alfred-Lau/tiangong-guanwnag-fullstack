@@ -10,6 +10,10 @@ const plugin: EggPlugin = {
     enable: true,
     package: "egg-view-assets",
   },
+  sequelize: {
+    enable: true,
+    package: "egg-sequelize",
+  },
 };
 
 export default plugin;
