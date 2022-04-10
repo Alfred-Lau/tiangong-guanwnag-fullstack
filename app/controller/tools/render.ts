@@ -12,7 +12,11 @@ export default class RenderController extends Controller {
 
     try {
       const dogs = await ctx.app.axiosInstance.get("/api/breeds/image/random");
-      console.log(dogs.data);
+      // console.log(dogs.data);
+      ctx.logger.debug(dogs.data);
+      // ctx.logger.info(dogs.data);
+      // ctx.logger.warn(dogs.data);
+      // ctx.logger.error(dogs.data);
       ctx.body = await ctx.model.Render.findAll({});
     } catch (e) {
       ctx.body = ctx.formatControllerResponse(e as string, "error");

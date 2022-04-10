@@ -36,6 +36,10 @@ export default (appInfo: EggAppInfo) => {
     },
   };
 
+  config.logger = {
+    consoleLevel: "DEBUG",
+  };
+
   config.sequelize = {
     dialect: "mysql",
     host: "localhost",

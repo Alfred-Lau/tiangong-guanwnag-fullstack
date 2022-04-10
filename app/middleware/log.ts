@@ -1,8 +1,9 @@
-import { Application, Context, EggAppConfig } from "egg";
+import { Context, EggAppConfig } from "egg";
 import path from "path";
 import fs from "fs";
 
-export default (options: EggAppConfig["log"], app: Application) => {
+// export default (options: EggAppConfig["log"], app: Application) => {
+export default (options: EggAppConfig["log"]) => {
   return async (ctx: Context, next: () => Promise<any>) => {
     const { pages, basePath } = options;
     const url = ctx.path;
