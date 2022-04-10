@@ -5,7 +5,6 @@ import fs from "fs";
 export default (options: EggAppConfig["log"], app: Application) => {
   return async (ctx: Context, next: () => Promise<any>) => {
     const { pages, basePath } = options;
-    console.log("app log config", app.config.log);
     const url = ctx.path;
     try {
       if (!ctx.isAPI()) {

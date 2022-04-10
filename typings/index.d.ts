@@ -13,3 +13,10 @@ declare global {
     }
   }
 }
+
+declare module "egg-mock" {
+  interface MockApplication {
+    model: any;
+    factory: any;
+  }
+}
