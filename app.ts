@@ -1,5 +1,6 @@
 import { Application, IBoot } from "egg";
 import { createConnection } from "mongoose";
+import { join } from "path";
 import assert from "assert";
 import dotenv from "dotenv";
 dotenv.config();
@@ -26,6 +27,10 @@ export default class AppBootstrap implements IBoot {
   }
   async willReady() {
     // this.app.logger.info("enable willReady", this.app.config.coreMiddleware);
+    const dir = join(this.app.config.baseDir, "app/mongoModel");
+    this.app.loader.loadToApp(dir, "mongoModel", {
+      caseStyle: "upper",
+    });
   }
 
   async didReady() {

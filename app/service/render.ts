@@ -1,6 +1,5 @@
 import { Service } from "egg";
 import puppeteer from "puppeteer";
-import { Schema } from "mongoose";
 import path from "path";
 import fs from "fs/promises";
 
@@ -109,24 +108,8 @@ class RenderService extends Service {
     }
   }
 
-  private getPersonalModel() {
-    const { app } = this;
-    //  下面的 collection  名称必须和 mongo的物理名称一致, model 名称 是一个 单数大写的抽象
-    const UserSchema = new Schema(
-      {
-        name: { type: String },
-        age: { type: Number },
-        hobbies: { type: Array },
-      },
-      { collection: "users" }
-    );
-
-    return app.mongoose.model("User", UserSchema);
-  }
-
   async showPlayers() {
-    const PersonalModel = this.getPersonalModel();
-    return await PersonalModel.find({
+    return await this.app.mongoModel.User.find({
       age: { $gt: 30 },
     }).exec();
   }

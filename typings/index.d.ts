@@ -1,10 +1,13 @@
 import "egg";
-import { Connection } from "mongoose";
+import { Connection, Model } from "mongoose";
 
 declare module "egg" {
   interface Application {
     cache: any;
     mongoose: Connection;
+    mongoModel: {
+      [key: string]: Model<any>;
+    };
   }
 }
 
