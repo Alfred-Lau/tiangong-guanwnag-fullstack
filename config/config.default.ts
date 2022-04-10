@@ -23,46 +23,17 @@ export default (appInfo: EggAppInfo) => {
     },
   };
 
+  config.cors = {
+    origin: "*",
+  };
+
   // add your egg config in here
-  config.middleware = ["seo"];
+  config.middleware = ["log", "seo"];
 
   config.view = {
     mapping: {
       ".html": "nunjucks",
     },
-  };
-
-  // seo 部分的支持
-  config.seo = {
-    site: "https://lazy-minus-your-intelligence.com",
-    basePath: join(appInfo.baseDir, "app", "view"),
-    // 需要 进行seo的页面 url 和 对应模板名称
-    pages: [{ path: "/", name: "index.html" }],
-  };
-
-  // render 基础的配置
-  config.render = {
-    basePath: join(appInfo.baseDir, "app", "public", folderName),
-    site: "https://lazy-minus-your-intelligence.com",
-    pages: [{ path: "/", name: "index.html" }],
-  };
-
-  config.h5render = {
-    device: {
-      height: 3000,
-      width: 1800,
-    },
-  };
-
-  config.storage = {
-    oss: {
-      //大文件上传
-    },
-  };
-
-  // 下载配置
-  config.download = {
-    downloadPath: join(appInfo.baseDir, "app/download"),
   };
 
   config.sequelize = {
@@ -96,6 +67,43 @@ export default (appInfo: EggAppInfo) => {
   // add your special config in here
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,
+    log: {
+      level: "error",
+      match: "/api",
+    },
+    // seo 部分的支持
+
+    seo: {
+      site: "https://lazy-minus-your-intelligence.com",
+      basePath: join(appInfo.baseDir, "app", "view"),
+      // 需要 进行seo的页面 url 和 对应模板名称
+      pages: [{ path: "/", name: "index.html" }],
+    },
+
+    // render 基础的配置
+    render: {
+      basePath: join(appInfo.baseDir, "app", "public", folderName),
+      site: "https://lazy-minus-your-intelligence.com",
+      pages: [{ path: "/", name: "index.html" }],
+    },
+
+    h5render: {
+      device: {
+        height: 3000,
+        width: 1800,
+      },
+    },
+
+    storage: {
+      oss: {
+        //大文件上传
+      },
+    },
+
+    // 下载配置
+    download: {
+      downloadPath: join(appInfo.baseDir, "app/download"),
+    },
   };
 
   // the return config will combines to EggAppConfig

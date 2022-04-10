@@ -95,7 +95,6 @@ class RenderService extends Service {
 
   async insertRecords(records) {
     const { ctx } = this;
-    await ctx.model.Render.findAll({});
     const result = [] as any;
     try {
       for (const record of records) {

@@ -7,29 +7,31 @@ export default class RenderController extends Controller {
     ctx.body = ctx.params.pageId;
   }
 
-  public async snapshot() {
+  public async record() {
     const { ctx } = this;
 
-    let uploadResult;
+    try {
+      ctx.body = await ctx.model.Render.findAll({});
+    } catch (e) {
+      ctx.body = ctx.formatControllerResponse(e as string, "error");
+    }
+  }
+
+  public async snapshot() {
+    const { ctx } = this;
 
     try {
       const { success, filepath } = await ctx.service.render.snapshot();
       if (success) {
-        uploadResult = await ctx.service.oss.upload(filepath);
-        // TODO: 上传数据传入数据库
-        const insertResult = await ctx.service.render.insertRecords(
-          uploadResult
-        );
-
-        ctx.info(insertResult as string);
+        const uploadResult = await ctx.service.oss.upload(filepath);
+        await ctx.service.render.insertRecords(uploadResult);
+        ctx.body = await ctx.model.Render.findAll({});
       } else {
-        uploadResult = null;
+        ctx.body = ctx.formatControllerResponse("截图失败", "error");
       }
     } catch (e) {
       ctx.logger.error(e);
     }
-
-    ctx.body = uploadResult;
   }
 
   public async download() {

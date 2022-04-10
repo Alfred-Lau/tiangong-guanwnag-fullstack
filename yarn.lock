@@ -837,6 +837,13 @@
     "@types/yargs" "^15.0.0"
     "chalk" "^4.0.0"
 
+"@koa/cors@^3.0.0":
+  "integrity" "sha512-lzlkqLlL5Ond8jb6JLnVVDmD2OPym0r5kvZlMgAWiS9xle+Q5ulw1T358oW+RVguxUkANquZQz82i/STIRmsqQ=="
+  "resolved" "https://registry.npmjs.org/@koa/cors/-/cors-3.3.0.tgz"
+  "version" "3.3.0"
+  dependencies:
+    "vary" "^1.1.2"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   "integrity" "sha1-UkryQNGjYFJ7cwR17PoTRKpUDd4="
   "resolved" "https://registry.npmmirror.com/@mrmlnc/readdir-enhanced/download/@mrmlnc/readdir-enhanced-2.2.1.tgz"
@@ -5232,6 +5239,13 @@
     "node-homedir" "^1.1.1"
     "ready-callback" "^2.1.0"
     "utility" "^1.16.1"
+
+"egg-cors@^2.2.3":
+  "integrity" "sha512-MLG4pQekZpycLXR45ZAIgFpFYshosBxu1CMdhXAzqPzxUn0xI21gVzqLqcxUrzzulaErCwG6qMXaS1eFyj9u2w=="
+  "resolved" "https://registry.npmjs.org/egg-cors/-/egg-cors-2.2.3.tgz"
+  "version" "2.2.3"
+  dependencies:
+    "@koa/cors" "^3.0.0"
 
 "egg-development@^2.4.2":
   "integrity" "sha1-VUto+HLupoSaIOTrHKFhcVoUA8s="

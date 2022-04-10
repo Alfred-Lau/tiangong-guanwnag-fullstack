@@ -24,7 +24,8 @@ export default (app: Application) => {
   // 预览 服务
   router.get("/api/preview/:url", controller.tools.preview.preview);
   // 巡检服务 【定时触发、接口触发】
-  router.get("/api/render/snapshot", controller.tools.render.snapshot);
+  router.get("/api/render/snapshot", controller.tools.render.snapshot); // 巡检服务 【定时触发、接口触发】
+  router.get("/api/render/record", controller.tools.render.record);
   // 巡检服务 【下载文件到服务器】
   router.post("/api/render/download", controller.tools.render.download);
   // 插入数据库数据
