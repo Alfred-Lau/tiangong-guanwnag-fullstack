@@ -2,7 +2,7 @@ import { Context } from "egg";
 
 export default {
   schedule: {
-    interval: "10m", // 10s 间隔
+    interval: "1d", // 10s 间隔
     type: "all", // 指定所有的 worker 都需要执行
   },
   async task(ctx: Context) {

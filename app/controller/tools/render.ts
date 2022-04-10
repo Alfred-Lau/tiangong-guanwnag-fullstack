@@ -23,6 +23,16 @@ export default class RenderController extends Controller {
     }
   }
 
+  public async getMongoPlayers() {
+    const { ctx } = this;
+    try {
+      ctx.body = await ctx.service.render.showPlayers();
+    } catch (error) {
+      ctx.logger.error(error);
+      ctx.body = ctx.formatControllerResponse(error as string, "error");
+    }
+  }
+
   public async snapshot() {
     const { ctx } = this;
 

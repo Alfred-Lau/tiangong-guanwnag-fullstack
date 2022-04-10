@@ -28,7 +28,7 @@ export default (appInfo: EggAppInfo) => {
   };
 
   // add your egg config in here
-  config.middleware = ["log", "seo"];
+  config.middleware = ["seo"];
 
   config.view = {
     mapping: {
@@ -107,6 +107,10 @@ export default (appInfo: EggAppInfo) => {
     // 下载配置
     download: {
       downloadPath: join(appInfo.baseDir, "app/download"),
+    },
+
+    mongoose: {
+      url: "mongodb://localhost:27017/tiangong_env_dev",
     },
   };
 

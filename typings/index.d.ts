@@ -1,8 +1,10 @@
 import "egg";
+import { Connection } from "mongoose";
 
 declare module "egg" {
   interface Application {
     cache: any;
+    mongoose: Connection;
   }
 }
 
