@@ -62,3 +62,9 @@ $ npm start
 
 
 http://dev.tiangong.net:7001/preview/https%3A%2F%2Fpre.oceanbase.com%2F
+
+
+```js
+"ci": "eslint . && NODE_ENV=test npx sequelize db:migrate && egg-bin cov",
+
+```
