@@ -11,6 +11,10 @@ export default (app: Application) => {
   // framework/features
   router.get("/api/v1/framework", controller.api.framework.getFramework);
 
+  // 用户系统接口
+  router.post("/api/v1/user", controller.api.user.createByEmail);
+  router.get("/api/v1/user", controller.api.user.show);
+
   // 文档相关接口
   // 获取目录列表
   router.get("/api/v1/doc/category", controller.api.doc.getCategory);

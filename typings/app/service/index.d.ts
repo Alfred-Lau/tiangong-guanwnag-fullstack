@@ -12,6 +12,7 @@ import ExportLog from '../../../app/service/log';
 import ExportOss from '../../../app/service/oss';
 import ExportRender from '../../../app/service/render';
 import ExportSeo from '../../../app/service/seo';
+import ExportUser from '../../../app/service/user';
 
 declare module 'egg' {
   interface IService {
@@ -21,5 +22,6 @@ declare module 'egg' {
     oss: AutoInstanceType<typeof ExportOss>;
     render: AutoInstanceType<typeof ExportRender>;
     seo: AutoInstanceType<typeof ExportSeo>;
+    user: AutoInstanceType<typeof ExportUser>;
   }
 }
