@@ -54,7 +54,7 @@ export default class RenderController extends Controller {
     const { ctx } = this;
     const { filename } = ctx.request.body;
 
-    ctx.validate({
+    ctx._validate({
       filename: "string",
     });
 

@@ -12,7 +12,7 @@ export default class FrameworkController extends Controller {
       content: { type: "string" },
     };
     // 校验参数
-    ctx.validate(createRule);
+    ctx._validate(createRule);
     // 组装参数
     const author = ctx.session.userId;
     const req = Object.assign(ctx.request.body, { author });

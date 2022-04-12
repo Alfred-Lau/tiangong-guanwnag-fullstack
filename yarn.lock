@@ -5495,6 +5495,13 @@
     "mkdirp" "^0.5.1"
     "utility" "^1.13.1"
 
+"egg-validate@^2.0.2":
+  "integrity" "sha512-pUTfMTHQSpzDKAWkH19ZpyQBK22UToAwNWIgW1eXCAMpz+qvULuI5ey7dgqGQ/ZNwV2w/Stg96BrzW5uigCuVg=="
+  "resolved" "https://registry.npmjs.org/egg-validate/-/egg-validate-2.0.2.tgz"
+  "version" "2.0.2"
+  dependencies:
+    "parameter" "^3.0.0"
+
 "egg-view-assets@^1.8.0":
   "integrity" "sha1-cQ1PVyR7a//DC4fbIYW+DsRKZrQ= sha512-yrmr/To6afzDlQu8ySA7kQmGtL7QVYY4lw0lW0aajmCoVj906PoX4WB2mufm+0sB1DmRxn0U2lTAxN67VDCn1g=="
   "resolved" "https://registry.npmmirror.com/egg-view-assets/download/egg-view-assets-1.8.0.tgz"
@@ -10277,6 +10284,11 @@
   "version" "2.1.1"
   dependencies:
     "no-case" "^2.2.0"
+
+"parameter@^3.0.0":
+  "integrity" "sha512-KtXBPFX92SNh6E3dTRJ8fT0Dw23XPyAmp3YGZwhupRUsxl0EbtV1StuWSt76MsQdh6r4azZogsc+QTxYLBDziQ=="
+  "resolved" "https://registry.npmjs.org/parameter/-/parameter-3.6.0.tgz"
+  "version" "3.6.0"
 
 "parent-module@^1.0.0":
   "integrity" "sha1-aR0nCeeMefrjoVZiJFLQB2LKqqI="
