@@ -17,7 +17,7 @@ export default class RenderController extends Controller {
       // ctx.logger.info(dogs.data);
       // ctx.logger.warn(dogs.data);
       // ctx.logger.error(dogs.data);
-      ctx.body = await ctx.model.Render.findAll({});
+      ctx.body = await ctx.mysqlModel.Render.findAll({});
     } catch (e) {
       ctx.body = ctx.formatControllerResponse(e as string, "error");
     }
@@ -41,7 +41,7 @@ export default class RenderController extends Controller {
       if (success) {
         const uploadResult = await ctx.service.oss.upload(filepath);
         await ctx.service.render.insertRecords(uploadResult);
-        ctx.body = await ctx.model.Render.findAll({});
+        ctx.body = await ctx.mysqlModel.Render.findAll({});
       } else {
         ctx.body = ctx.formatControllerResponse("截图失败", "error");
       }

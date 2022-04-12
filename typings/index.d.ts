@@ -1,14 +1,25 @@
 import "egg";
+import sequelize from "sequelize";
 import { Connection, Model } from "mongoose";
+import { UserProps } from "../app/mongoModel/user";
 
 declare module "egg" {
   interface Application {
     cache: any;
     mongoose: Connection;
-    mongoModel: {
-      [key: string]: Model<any>;
-    };
+    model: MongooseModels;
+    mysqlModel: IModel;
   }
+
+  interface Context {
+    model: MongooseModels;
+  }
+
+  interface MongooseModels {
+    User: Model<UserProps>;
+  }
+
+  interface IModel extends sequelize.Sequelize, PlainObject {}
 }
 
 declare global {

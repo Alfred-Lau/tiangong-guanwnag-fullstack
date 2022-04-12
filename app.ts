@@ -28,14 +28,14 @@ export default class AppBootstrap implements IBoot {
   async willReady() {
     // this.app.logger.info("enable willReady", this.app.config.coreMiddleware);
     const dir = join(this.app.config.baseDir, "app/mongoModel");
-    this.app.loader.loadToApp(dir, "mongoModel", {
+    this.app.loader.loadToContext(dir, "model", {
       caseStyle: "upper",
     });
   }
 
   async didReady() {
     // const ctx = await this.app.createAnonymousContext();
-    // const res = await ctx.model.Render.findAll({});
+    // const res = await ctx.mysqlModel.Render.findAll({});
     // ctx.logger.debug(res);
   }
 }

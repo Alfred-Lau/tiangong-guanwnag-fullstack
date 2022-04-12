@@ -41,6 +41,7 @@ export default (appInfo: EggAppInfo) => {
   };
 
   config.sequelize = {
+    delegate: "mysqlModel",
     dialect: "mysql",
     host: "localhost",
     username: "root",

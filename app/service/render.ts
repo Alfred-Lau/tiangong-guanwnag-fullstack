@@ -98,7 +98,7 @@ class RenderService extends Service {
     const result = [] as any;
     try {
       for (const record of records) {
-        const ret = await ctx.model.Render.create(record);
+        const ret = await ctx.mysqlModel.Render.create(record);
         result.push(ret);
       }
       console.log(result);
@@ -109,7 +109,7 @@ class RenderService extends Service {
   }
 
   async showPlayers() {
-    return await this.app.mongoModel.User.find({
+    return await this.app.model.User.find({
       age: { $gt: 30 },
     }).exec();
   }

@@ -1,5 +1,4 @@
 import { Service } from "egg";
-import { Model } from "mongoose";
 import { UserProps } from "../mongoModel/user";
 
 class UserService extends Service {
@@ -12,12 +11,11 @@ class UserService extends Service {
       email: username,
     };
 
-    return ctx.app.mongoModel.User.create(userCreateData);
+    return ctx.model.User.create(userCreateData);
   }
 
   async findById(id: string) {
-    const currentUserModel = this.ctx.app.mongoModel.User as Model<UserProps>;
-    const result = await currentUserModel.findById(id);
+    const result = await this.ctx.model.User.findById(id);
     if (result) {
       result._id;
     }

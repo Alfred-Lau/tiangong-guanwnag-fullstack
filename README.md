@@ -68,3 +68,5 @@ http://dev.tiangong.net:7001/preview/https%3A%2F%2Fpre.oceanbase.com%2F
 "ci": "eslint . && NODE_ENV=test npx sequelize db:migrate && egg-bin cov",
 
 ```
+ctx.model 上面挂载的是 mongoose
+ctx.mysqlModel 上面挂载的是 mysql
