@@ -28,7 +28,7 @@ class OssService extends Service {
       let result = await (this.client as OSS)!.get(filename, downloadFilePath);
       ctx.info(result);
     } catch (e) {
-      ctx.error(e as string);
+      ctx.error({ errno: 0, msg: (e as Error).message });
     }
   }
 
